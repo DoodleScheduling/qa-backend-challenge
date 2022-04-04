@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+
+  qa-challenge:
+    container_name: qa-challenge
+    image: marqusm/doodle-qa-challenge:0.7
+    restart: unless-stopped
+    depends_on:
+      - qa-challenge-database
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2048M
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://qa-challenge-database:5432/qa_challenge
+      SPRING_DATASOURCE_USERNAME: doodle
+      SPRING_DATASOURCE_PASSWORD: d00D13
+    networks:
+      - qa-challenge
+
+  qa-challenge-database:
+    container_name: qa-challenge-database
+    image: marqusm/doodle-qa-challenge-database:0.2
+    environment:
+      POSTGRES_DB: qa_challenge
+      POSTGRES_USER: doodle
+      POSTGRES_PASSWORD: d00D13
+    ports:
+      - "5432:5432"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2048M
+    networks:
+      - qa-challenge
+    restart: unless-stopped
+
+networks:
+  qa-challenge:
+    driver: bridge
