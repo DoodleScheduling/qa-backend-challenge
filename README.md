@@ -42,7 +42,7 @@ The system has 4 endpoints:
 - */calendars*
 
 The purpose of the service is to manage the meeting scheduling. We can create: 
-- *Users* - Represent clients of the platform. User is defined with a `name`. 
+- *Users* - represent clients of the platform. User is defined with a `name`. 
 - *Slots* - represent a time span that can be selected to book a meeting. Slot is defined with `startAt`, and `endAt` timestamps.
 - *Meetings* - represent selected slots. Once a slot is selected, it becomes a meeting. Meeting is defined with a  `title`, `slotId`, and `participants`. 
 
