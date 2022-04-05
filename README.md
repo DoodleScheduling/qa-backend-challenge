@@ -63,6 +63,8 @@ Calendar - contains all the slots and meeting data for the specified month as we
 count of slots and meetings before and after the selected month. For example:
 - `GET /calendars/month=2021-03` will return the data for March 2021.
 
+>TIP: There is already some pre-generated test data populated at the boot time, to help you get started! 
+
 ## What we expect:
 Given the above information, think of how you would write ***API/Performance*** tests for the test system.</br>
 Create the test repository on GitHub(or any other VCS) with instructions on how to run it with your findings and test results.
