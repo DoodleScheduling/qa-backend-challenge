@@ -4,9 +4,15 @@
 Congratulations! You have reached the technical part of the QA backend challenge at ***Doodle***.</br>
 Please, ***read carefully*** the instructions on how to set up the test environment! Happy bug hunting! 🐞
 
-## How to run
+#### Table of Contents
+
+1. [Setup](#setup)
+2. [Useful information about the API](#useful-information-about-the-api)
+3. [The task](#the-task)
+
+## Setup
 To run the system under test in a virtualized environment, you have to have ***[Docker service](https://www.docker.com/products/docker-desktop/)*** running on your machine.</br>
-The system contains ***backend service***, and its' respective ***PostgreSQL DB***.</br>
+The system contains ***backend service***, and its respective ***PostgreSQL DB***.</br>
 
 ---
 **NOTE**
@@ -38,8 +44,8 @@ The system is ready for testing once you see a message like this in the logs:
 Started BackendChallengeApplication in 3.921 seconds (JVM running for 4.308)
 ```
 
-## Useful information
-Once the application has started API documentation required for testing can be found here: ***[Swagger documentation](http://localhost:8080/swagger-ui.html)***
+## Useful information about the API
+Once the application has started API documentation required for testing can be found in the ***[Swagger documentation](http://localhost:8080/swagger-ui.html)***
 
 The system has four endpoints:
 - */users*
@@ -50,7 +56,7 @@ The system has four endpoints:
 The purpose of the service is to manage the meeting scheduling. We can create: 
 - *Users* - represent clients of the platform. User is defined with a `name`. 
 - *Slots* - represent a time span that can be selected to book a meeting. Slot is defined with `startAt`, and `endAt` timestamps.
-- *Meetings* - represent selected slots. Once a slot is selected, it becomes a meeting. Meeting is defined with a  `title`, `slotId`, and `participants`. 
+- *Meetings* - represent selected slots. Once a slot is selected, it becomes a meeting. A meeting is defined with a  `title`, `slotId`, and `participants`. 
 
 These three entities are simple and have basic ***CRD*** operations (no update). For example:
 - `POST /users {"name":"User Name"}` will create a user.
@@ -65,6 +71,7 @@ count of slots and meetings before and after the selected month. For example:
 
 >TIP: There is already some pre-generated test data populated at the boot time, to help you get started! 
 
-## What we expect:
-Given the above information, think of how you would write ***API/Performance*** tests for the test system.</br>
-Create the test repository on GitHub(or any other VCS) with instructions on how to run it with your findings and test results.
+## The task
+Given the information above, think of how you would write ***API*** tests for this test system and create test suite accordingly. </br>
+Send us a link to the test repository you created on GitHub (or any other VCS) containing instructions on how to run it, including your findings and test results.</br>
+>NOTE: If you do not feel comfortable with API tests and would rather create performance tests - that's alright with us, too.</br>
