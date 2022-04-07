@@ -72,6 +72,6 @@ count of slots and meetings before and after the selected month. For example:
 >TIP: There is already some pre-generated test data populated at the boot time, to help you get started! 
 
 ## The task
-Given the information above, think of how you would write ***API*** tests for this test system and create a few. </br>
+Given the information above, think of how you would write ***API*** tests for this test system and create test suite accordingly. </br>
 Send us a link to the test repository you created on GitHub (or any other VCS) containing instructions on how to run it, including your findings and test results.</br>
-_Note: if you do not feel comfortable with API tests and would rather create performance tests - that's alright with us, too._</br>
+>NOTE: If you do not feel comfortable with API tests and would rather create performance tests - that's alright with us, too.</br>
